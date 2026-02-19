@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QN5TM38347"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-QN5TM38347');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Download for Windows - Git Instant Output</title>
@@ -99,7 +109,7 @@
             border: 1px solid var(--border-default);
             border-radius: 6px;
             padding: 24px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
 
         .card-header {
@@ -119,7 +129,8 @@
 
         /* Progress Section */
         .status-box {
-            background-color: rgba(56, 139, 253, 0.1); /* Subtle blue bg */
+            background-color: rgba(56, 139, 253, 0.1);
+            /* Subtle blue bg */
             border: 1px solid rgba(56, 139, 253, 0.2);
             border-radius: 6px;
             padding: 16px;
@@ -185,8 +196,13 @@
             color: var(--text-secondary);
         }
 
-        .term-success { color: var(--terminal-text-green); }
-        .term-text { color: var(--text-primary); }
+        .term-success {
+            color: var(--terminal-text-green);
+        }
+
+        .term-text {
+            color: var(--text-primary);
+        }
 
         /* Installation Guide */
         .steps-list {
@@ -226,7 +242,7 @@
         .image-placeholder {
             width: 100%;
             height: 200px;
-            background-color: rgba(255,255,255,0.03);
+            background-color: rgba(255, 255, 255, 0.03);
             border: 2px dashed var(--border-default);
             border-radius: 6px;
             display: flex;
@@ -253,7 +269,7 @@
             color: var(--accent-blue);
             text-decoration: none;
         }
-        
+
         footer a:hover {
             text-decoration: underline;
         }
@@ -262,22 +278,27 @@
         .terminal::-webkit-scrollbar {
             width: 8px;
         }
+
         .terminal::-webkit-scrollbar-track {
             background: transparent;
         }
+
         .terminal::-webkit-scrollbar-thumb {
             background-color: #30363d;
             border-radius: 4px;
         }
-
     </style>
 </head>
+
 <body>
 
     <header>
         <div class="header-left">
-            <svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" data-view-component="true" class="github-logo">
-                <path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path>
+            <svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" data-view-component="true"
+                class="github-logo">
+                <path
+                    d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z">
+                </path>
             </svg>
             <div>
                 <div class="site-title">Download for Windows</div>
@@ -307,7 +328,8 @@
                 <div class="progress-label" id="progress-label">0% complete</div>
 
                 <div class="terminal" id="terminal">
-                    <div class="terminal-line" style="color: var(--accent-green-text); font-weight: bold;">COMPILATION OUTPUT</div>
+                    <div class="terminal-line" style="color: var(--accent-green-text); font-weight: bold;">COMPILATION
+                        OUTPUT</div>
                     <!-- Lines will be added by JS -->
                 </div>
             </div>
@@ -320,9 +342,9 @@
                 </div>
 
                 <!-- Placeholder for image -->
-                 <div class="image-placeholder">
+                <div class="image-placeholder">
                     [ Application Screenshot Placeholder ]
-                 </div>
+                </div>
 
                 <ul class="steps-list">
                     <li class="step-item">
@@ -348,7 +370,11 @@
 
     <footer>
         <div style="display: flex; gap: 8px; align-items: center;">
-            <svg height="24" width="24" viewBox="0 0 16 16" version="1.1" fill="#8b949e" aria-hidden="true"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path></svg>
+            <svg height="24" width="24" viewBox="0 0 16 16" version="1.1" fill="#8b949e" aria-hidden="true">
+                <path
+                    d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z">
+                </path>
+            </svg>
             <span>© 2025 GitHub, Inc.</span>
         </div>
         <a href="#">Terms</a>
@@ -383,14 +409,14 @@
         function addLog(message, type) {
             const line = document.createElement('div');
             line.className = 'terminal-line';
-            
+
             const timeSpan = document.createElement('span');
             timeSpan.className = 'timestamp';
             timeSpan.textContent = getTime();
 
             const textSpan = document.createElement('span');
             textSpan.className = type === 'success' ? 'term-success' : 'term-text';
-            
+
             if (type === 'success') {
                 textSpan.innerHTML = `✓ ${message}`;
             } else {
@@ -415,7 +441,7 @@
 
         const timer = setInterval(() => {
             progress += increment;
-            
+
             // Randomize speed slightly
             if (Math.random() > 0.7) {
                 progress += increment * 2;
@@ -433,12 +459,13 @@
             // Handle logs
             const currentTime = Date.now();
             if (logIndex < logs.length && (progress / 100) * logs.length > logIndex) {
-                 addLog(logs[logIndex].text, logs[logIndex].type);
-                 logIndex++;
+                addLog(logs[logIndex].text, logs[logIndex].type);
+                logIndex++;
             }
 
         }, intervalTime);
 
     </script>
 </body>
+
 </html>
